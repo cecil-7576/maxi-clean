@@ -32,24 +32,21 @@ function Footer() {
           <p className="text-lg">
             18a Uruan Street,off Uyo-Oron Uyo, Akwa-Ibom, Nigeria.
           </p>
-          <p className="text-blue-400 text-lg mb-4">+234 706 738 4367</p>
+          <p className="text-blue-400 text-lg mb-4">+234 703 795 3559</p>
 
-          {/* <p className="font-medium text-sm text-gray-200">Ajao Estate Branch:</p>
-          <p className="text-sm">
-            30 Asa Afariogun St. (Laundromat Building), Ajao Estate, Lagos,
-            Nigeria.
-          </p>
-          <p className="text-blue-400 text-sm">+234 702 565 0058</p> */}
         </div>
 
         {/* Contact */}
         <div>
           <h3 className="font-semibold text-white mb-4">CONTACT</h3>
-          <p className="text-blue-400 text-lg mb-2">+234 706 738 4367</p>
-          <p className="text-lg mb-6">hello@maxiclean.com</p>
+          <p className="text-blue-400 text-lg mb-2">+234 703 795 3559</p>
+          <p className="text-lg mb-6">maxiclean001@gmail.com</p>
           <hr className="border-gray-600 mb-4" />
           <p className="text-xs text-gray-400">
-            © 2025 Maxi-Clean Laundromat.
+            © 2025 Maxi-Clean Laundromat. <span></span>
+            <span>
+               | All rights reserved. | Powered by <span className="text-[#ED3338]">VirCil</span>
+            </span>
           </p>
         </div>
       </div>
@@ -57,4 +54,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer;

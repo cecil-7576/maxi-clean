@@ -4,7 +4,8 @@ import {FiMenu, FiX} from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import { NavHashLink} from 'react-router-hash-link';
 import { useLocation } from 'react-router-dom'; 
-
+// import DarkModeToggle from './DarkModeToggle';
+import { MdDarkMode, MdLightMode } from "react-icons/md"; 
 
 
 
@@ -12,6 +13,19 @@ function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
+    const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
+
+    useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
 
     useEffect(()=>{
       document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -23,13 +37,13 @@ function Navbar() {
     const linkClass = (hash) =>
   location.hash === hash || (hash === "#top" && location.hash === "")
     ? "text-yellow-400 underline font-bold px-3 py-2 transition"
-    : "text-indigo-900 px-3 py-2 transition hover:text-yellow-400";
+    : "text-indigo-900 px-3 py-2 transition hover:text-yellow-400 dark:text-indigo-100";
 
     
   return (
      
    <nav className="fixed inset-x-0 top-0 z-50 bg-white/10 backdrop-blur-sm shadow-sm border-white/20
-  shadow-lg rounded-b-2xl">
+  shadow-lg rounded-b-2xl dark:bg-black/40 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-25">
         {/* LOGO */}
         <NavHashLink to="/#top" className="flex items-center gap-3">
@@ -62,6 +76,14 @@ function Navbar() {
           to="/#contact" 
           className={linkClass("#contact")}>Contact</NavHashLink></li>
         </ul>
+
+        {/* Dark/Light Toggle */}
+        <button
+          onClick={() => setDarkMode((prev) => !prev)}
+          className="ml-4 text-2xl text-[#013BC7] dark:text-yellow-300"
+        >
+          {darkMode ? <MdLightMode /> : <MdDarkMode />}
+        </button>
 
         {/* MOBILE TOGGLE */}
         <button

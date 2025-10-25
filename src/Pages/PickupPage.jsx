@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from "emailjs-com";
-// import masiBg2 from '../assets/maxi2.jpg';
+
 
 
 function PickupPage() {
@@ -48,7 +48,7 @@ function PickupPage() {
 
     // Replace with YOUR WhatsApp number (include country code, no + sign)
     window.open(
-      `https://wa.me/2347067384367?text=${encodeURIComponent(whatsappMsg)}`,
+      `https://wa.me/2347037953559?text=${encodeURIComponent(whatsappMsg)}`,
       "_blank"
     );
 
@@ -150,4 +150,4 @@ function PickupPage() {
   )
 }
 
-export default PickupPage
+export default PickupPage;

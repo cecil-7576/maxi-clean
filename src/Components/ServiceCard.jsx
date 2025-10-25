@@ -23,7 +23,7 @@ function ServiceCard() {
           <h3 className="text-lg md:text-xl font-semibold text-[#013bc7] mt-1">
             Low, Flat Rate per Bag
           </h3>
-          <p className="text-gray-600 mt-3 leading-relaxed text-2xl">
+          <p className="text-gray-600 mt-3 leading-relaxed text-xl">
             💡 No Surprises. Just Clean Clothes. 💡
                 <br />
             With Maxi-Clean Laundromat, you’ll never have to guess your invoice again!
