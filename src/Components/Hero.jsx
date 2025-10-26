@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 function Hero() {
 
   function ThreeDObject() {
@@ -66,12 +67,18 @@ function Hero() {
     // </section>
 
     <section
-      className="relative h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-cover bg-center"
+      className="relative h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `url(${masiBg})` }}
       id='#top'
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-indigo-50 opacity-25"></div>
+      <div
+  className="absolute inset-0"
+  style={{
+    background: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.2))"
+  }}
+></div>
+
 
       {/* Floating Glow */}
       <motion.div

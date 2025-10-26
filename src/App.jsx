@@ -6,6 +6,8 @@ import {
 import MainLayout from "./layout/MainLayout";
 import Home from "./Pages/Home";
 import PickupPage from "./Pages/PickupPage";
+import WhatsAppButton from "./Components/WhatsAppButton";
+
 
 
 
@@ -16,14 +18,8 @@ const router = createBrowserRouter(
     <Route element= {<MainLayout />}>
       <Route path="/" element= {<Home />} />
       <Route path="/pickup" element= {<PickupPage />} />
-      {/* <Route path="/" element= {<Features />} />
-      <Route path="/about" element= {<About />} />
-      <Route path="/" element= {<ServiceCard />} />
-      <Route path="/" element= {<Services />} />
-      <Route path="/" element= {<Location />} />
-      <Route path="/price" element= {<Pricing />} />
-      <Route path="/contact" element= {<Contact />} />
-      <Route path="/" element= {<Footer />} /> */}
+      
+      
     </Route>
   )
 )
